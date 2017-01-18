@@ -1,8 +1,9 @@
 require "inkoop_error_tracker/version"
 
-module InkoopErrorTracker
+# module InkoopErrorTracker
+class InkoopErrorTracker
   # Your code goes here...
-  class Tracker
+  # class Tracker
     
     def self.api_key=(api_key)
       @@api_key = api_key
@@ -13,6 +14,6 @@ module InkoopErrorTracker
       res = Net::HTTP.post_form(uri, 'message' => 'mes', 'project_api' => @@api_key, 'description' => 'some description')
     end
 
-  end
+  # end
 end
 
