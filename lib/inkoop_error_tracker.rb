@@ -1,5 +1,4 @@
 require "inkoop_error_tracker/version"
-# require "inkoop_error_tracker/tracker"
 
 module InkoopErrorTracker
   # Your code goes here...
@@ -9,9 +8,11 @@ module InkoopErrorTracker
       @@api_key = api_key
     end
 
-    def track
-      uri = URI('http://localhost:3000/errors')
-      res = Net::HTTP.post_form(uri, 'message' => 'mes', 'project_api' => @@api_key, 'description' => 'some description')
+    def self.track error
+      uri = URI('http://error.inkoop.in/errors')
+      message = "#{error.message} - #{error.backtrace[0]}"
+      description = error.backtrace.join('\n')
+      res = Net::HTTP.post_form(uri, 'message' => message, 'project_api' => @@api_key, 'description' => description)
     end
 
   end
