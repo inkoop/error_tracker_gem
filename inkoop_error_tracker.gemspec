@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = InkoopErrorTracker::VERSION
   spec.authors       = ["Vivek"]
   spec.email         = ["vivekpatna52@gmail.com"]
-
+  spec.files         =['lib/inkoop_error_tracker.rb']
   spec.summary       = %q{Write a short summary, because Rubygems requires one.}
   spec.description   = %q{Write a longer description or delete this line.}
   spec.homepage      = "http://www.inkoop.in"
