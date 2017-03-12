@@ -1,8 +1,7 @@
 require "inkoop_error_tracker/version"
-# require "net/http"
+require "net/http"
 
 module InkoopErrorTracker
-  # Your code goes here...
   class Tracker
 
     @@api_key = nil
