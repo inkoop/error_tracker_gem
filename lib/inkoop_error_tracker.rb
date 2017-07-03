@@ -10,7 +10,7 @@ module InkoopErrorTracker
       @@api_key = api_key
     end
 
-    def self.track error, parameters
+    def self.track error, parameters={}
       if @@api_key
         uri = URI('http://error.inkoop.in/errors')
         message = "#{error.message} - #{error.backtrace[0]}"
