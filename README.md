@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Find more details here - [Error Tracker](https://www.inkoop.in/portfolio/error-tracker/)
 
 ## Development
 
